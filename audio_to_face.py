@@ -19,9 +19,7 @@ class AudioToFace(nn.Module):
     ):
         super().__init__()
 
-        self.fusion = nn.Sequential(
-            nn.Linear(118, lstm_input_size),
-        )
+        self.fusion = nn.Sequential(nn.Linear(118, lstm_input_size),)
         self.bn = nn.BatchNorm1d(lstm_input_size)
         self.lstm_layers = nn.LSTM(
             lstm_input_size,
@@ -36,17 +34,16 @@ class AudioToFace(nn.Module):
         self.lstm_hidden_size = hidden_size
 
     def forward(
-        self, 
-        audio,
-        init,
-        lengths,
+        self, audio, init, lengths,
     ):
         audio = torch.cat((audio, init.repeat(1, audio.shape[1], 1)), 2)
         audio = self.fusion(audio)
         n, T, C = audio.shape
         audio = self.bn(audio.reshape(-1, 192)).reshape(n, T, C)
         lengths = lengths.cpu().tolist()
-        audio = rnn_utils.pack_padded_sequence(audio, lengths, batch_first=True, enforce_sorted=False)
+        audio = rnn_utils.pack_padded_sequence(
+            audio, lengths, batch_first=True, enforce_sorted=False
+        )
 
         audio, _ = self.lstm_layers(audio)
 
