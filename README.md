@@ -1,4 +1,7 @@
 # Perceptual Conversational Head Generation with Regularized Driver and Enhanced Renderer
+
+## [YouTube](https://www.youtube.com/watch?v=-CzxvONWeG0) | [arXiv](https://arxiv.org/abs/2206.12837)
+
 ## Introduction
 This project is the implement of [Perceptual Conversational Head Generation with Regularized Driver and Enhanced Renderer](https://arxiv.org/abs/2206.12837). We ranked first place in the listening head generation track and second place in the talking head generation track in the official ranking of [MM2022-ViCo Conversational Head Generation Challenge](https://vico.solutions). Our team name is Megvii_goodjuice.
 
@@ -12,6 +15,6 @@ Change the padding mode of grid_sample in [PIRenderer](https://github.com/RenYur
 Use [U2Net](https://github.com/xuebinqin/U-2-Net) to segment the backgrounds and fuse them to remain the background unchanged.
 
 * Usage
-Clone [vico challenge baseline](https://github.com/dc3ea9f/vico_challenge_baseline), and replace `vico_challenge_baseline/vico/networks/audio_to_face.py`, `vico_challenge_baseline/vico/networks/speaker_generator.py`, `vico_challenge_baseline/PIRender/inference.py`, and move `u2net.py` to `vico_challenge_baseline/PIRender/u2net.py`.
+Clone [vico challenge baseline](https://github.com/dc3ea9f/vico_challenge_baseline), replace `vico_challenge_baseline/vico/networks/audio_to_face.py`, `vico_challenge_baseline/vico/networks/speaker_generator.py`, `vico_challenge_baseline/PIRender/inference.py`, and move `u2net.py` to `vico_challenge_baseline/PIRender/u2net.py`.
 
 You should also download U2Net weights `u2net_human_seg.pth` from [Google Drive](https://drive.google.com/file/d/1-Yg0cxgrNhHP-016FPdp902BR-kSsA4P/view?usp=sharing) and save in `vico_challenge_baseline/PIRender/u2net_human_seg.pth`
