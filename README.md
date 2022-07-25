@@ -2,6 +2,8 @@
 
 ## [YouTube](https://www.youtube.com/watch?v=-CzxvONWeG0) | [arXiv](https://arxiv.org/abs/2206.12837)
 
+![image](images/vico.png)
+
 ## Introduction
 This project is the implement of [Perceptual Conversational Head Generation with Regularized Driver and Enhanced Renderer](https://arxiv.org/abs/2206.12837). We ranked first place in the listening head generation track and second place in the talking head generation track in the official ranking of [MM2022-ViCo Conversational Head Generation Challenge](https://vico.solutions). Our team name is Megvii_goodjuice.
 
