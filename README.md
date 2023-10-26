@@ -1,5 +1,5 @@
 # Perceptual Conversational Head Generation with Regularized Driver and Enhanced Renderer
-
+[Zhewei Huang](https://github.com/hzwer), [Ailin Huang](https://scholar.google.com/citations?user=LM7RNL4AAAAJ&hl=zh-CN&oi=ao), [Shuchang Zhou](https://zsc.github.io)
 ## [YouTube](https://www.youtube.com/watch?v=-CzxvONWeG0) | [arXiv](https://arxiv.org/abs/2206.12837)
 
 ![image](images/vico.png)
