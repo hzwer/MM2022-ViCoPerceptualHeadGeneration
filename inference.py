@@ -119,7 +119,7 @@ def write2video(results_dir, *video_list):
             if cat_video is not None
             else video_numpy
         )
-    gen_images = cat_video[:, :, :256, ::-1]  # N, h, w, c
+    gen_images = cat_video[:, :, 256:, ::-1]  # N, h, w, c
     gt_images = cat_video[:, :, :256, ::-1]
 
     out_name = results_dir + ".mp4"
